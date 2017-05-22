@@ -1,11 +1,9 @@
 node_modules
 npm-debug.log
 
-scss
-css
-.sass-cache
 example
 todo.md
+src
 
 # Created by https://www.gitignore.io/api/osx,sass,node
 
