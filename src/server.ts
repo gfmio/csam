@@ -1,7 +1,7 @@
 /**
  * CSAM server module.
  * Provides the Server() function which loads Express and sets up the server environment
- * @module csam/client
+ * @module csam/server
  */
 
 declare function require(moduleName: string): any;
@@ -61,8 +61,8 @@ export class Server {
     });
   }
 
-  // Express app run function
-  public run() {
+  // Express app start function
+  public start() {
     return this.app.listen(this.port, this.host, () => {
       if (this.printLog) {
         console.log("App is listening to http://{ this.host }:{ this.port }");

@@ -8,6 +8,6 @@ export declare class Server {
     private state;
     private actions;
     constructor(model: any, state: any, actions: any, port?: number, host?: string, publicDir?: string, printLog?: boolean);
-    run(): any;
+    start(): any;
     stop(): void;
 }
