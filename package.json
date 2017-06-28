@@ -5,8 +5,8 @@
   "author": "Frédérique Mittelstaedt <frederique@gfm.io>",
   "main": "index.js",
   "scripts": {
-    "docs": "./node_modules/.bin/jsdoc -d docs ./src/**/*.ts",
-    "hint": "./node_modules/.bin/tslint -c tslint.json 'src/**/*.ts'"
+    "docs": "./node_modules/.bin/typedoc --theme default --name CSAM documentation --out ./docs ./src/**/*.ts",
+    "lint": "./node_modules/.bin/tslint -c tslint.json 'src/**/*.ts'"
   },
   "dependencies": {
     "compression": "^1.6.2",

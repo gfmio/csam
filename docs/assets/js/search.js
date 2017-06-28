@@ -1,0 +1,3 @@
+﻿var typedoc = typedoc || {};
+            typedoc.search = typedoc.search || {};
+            typedoc.search.data = {"kinds":{"1":"External module","65536":"Type literal"},"rows":[{"id":0,"kind":65536,"name":"__type","url":"classes/_state_.state.html#representation.__type-1","classes":"tsd-kind-type-literal tsd-parent-kind-property tsd-is-not-exported","parent":"\"state\".State.representation"},{"id":1,"kind":65536,"name":"__type","url":"classes/_state_.state.html#nextaction.__type","classes":"tsd-kind-type-literal tsd-parent-kind-property tsd-is-not-exported","parent":"\"state\".State.nextAction"},{"id":2,"kind":1,"name":"\"csam\"","url":"modules/_csam_.html","classes":"tsd-kind-external-module"}]};

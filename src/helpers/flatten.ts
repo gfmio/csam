@@ -3,6 +3,10 @@
  * @module csam/helpers/flatten
  */
 
+/**
+ * Flattens an array by recursively flattening all elements.
+ * @param {any[]} a - The (nested) array
+ */
 export function flatten(a: any[]): any[] {
   let arr: any[] = [];
   for (const e of a) {
