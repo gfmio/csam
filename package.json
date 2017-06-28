@@ -4,12 +4,22 @@
   "description": "csam - a fast and minimal component-based web framework based on the SAM (state-action-model) pattern",
   "author": "Frédérique Mittelstaedt <frederique@gfm.io>",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "docs": "./node_modules/.bin/jsdoc -d docs ./src/**/*.ts",
+    "hint": "./node_modules/.bin/tslint -c tslint.json 'src/**/*.ts'"
+  },
   "dependencies": {
     "compression": "^1.6.2",
     "express": "^4.13.3",
     "snabbdom": "^0.5.3",
     "snabbdom-to-html": "^3.0.0-beta.1",
     "snabbdom-virtualize": "^0.6.0"
-  }
+  },
+  "devDependencies": {
+    "jsdoc": "^3.4.3",
+    "jshint": "^2.9.5",
+    "tslint": "^5.4.3",
+    "typedoc": "^0.7.1"
+  },
+  "jshintConfig": {}
 }
