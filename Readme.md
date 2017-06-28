@@ -10,13 +10,6 @@ Response time < 40ms
 
 # To Do
 
-* Documentation
-  * csam.ts
-  * model.ts
-  * server.ts
-  * client.ts
-  * actions.ts
-  * component.ts
 * Readme
 * Actions
   * Are there any useful default actions to be included here (e.g. transitionTo)?

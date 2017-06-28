@@ -69,6 +69,13 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The Server class wrapping the Express server and linking it to the CSAM application model.</p>
+					</div>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -91,7 +98,7 @@
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-external"><a href="_server_.server.html#actions" class="tsd-kind-icon">actions</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-external"><a href="_server_.server.html#app" class="tsd-kind-icon">app</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-external"><a href="_server_.server.html#app" class="tsd-kind-icon">app</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-external"><a href="_server_.server.html#host" class="tsd-kind-icon">host</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-external"><a href="_server_.server.html#model" class="tsd-kind-icon">model</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-external"><a href="_server_.server.html#port" class="tsd-kind-icon">port</a></li>
@@ -116,34 +123,74 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Server<span class="tsd-signature-symbol">(</span>model<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, state<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, actions<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, port<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span>, host<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span>, publicDir<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, printLog<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_server_.server.html" class="tsd-signature-type">Server</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Server<span class="tsd-signature-symbol">(</span>model<span class="tsd-signature-symbol">: </span><a href="_model_.model.html" class="tsd-signature-type">Model</a>, state<span class="tsd-signature-symbol">: </span><a href="_state_.state.html" class="tsd-signature-type">State</a>, actions<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, port<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span>, host<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span>, publicDir<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span>, printLog<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_server_.server.html" class="tsd-signature-type">Server</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/gfmio/csam/blob/52d8ccc/src/server.ts#L27">server.ts:27</a></li>
+									<li>Defined in <a href="https://github.com/gfmio/csam/blob/0576515/src/server.ts#L45">server.ts:45</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Create a Server object and set up express.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>model: <span class="tsd-signature-type">any</span></h5>
+									<h5>model: <a href="_model_.model.html" class="tsd-signature-type">Model</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>The Model of the application</p>
+										</div>
+									</div>
 								</li>
 								<li>
-									<h5>state: <span class="tsd-signature-type">any</span></h5>
+									<h5>state: <a href="_state_.state.html" class="tsd-signature-type">State</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>The State of the application</p>
+										</div>
+									</div>
 								</li>
 								<li>
 									<h5>actions: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>The list of actions available in the application.
+											<strong>Currently requires a member method </strong><code>transitionTo(url: String): void</code></p>
+										</div>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> port: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>The port to run the server on. Optional.
+											Defaults to the environment variable PORT, if it exists, or 3000.</p>
+										</div>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> host: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>The host to run the server on. Optional.
+											Defaults to the environment variable HOST, if it exists, or localhost.</p>
+										</div>
+									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> publicDir: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;./public&quot;</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> publicDir: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;./public&quot;</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>The public directory for static files. Optional.
+												Defaults to &#39;./public&#39;. Pass <code>undefined</code> if you do not
+											want a public directory to be served.</p>
+										</div>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> printLog: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;true</span></h5>
@@ -162,17 +209,17 @@
 					<div class="tsd-signature tsd-kind-icon">actions<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/gfmio/csam/blob/52d8ccc/src/server.ts#L27">server.ts:27</a></li>
+							<li>Defined in <a href="https://github.com/gfmio/csam/blob/0576515/src/server.ts#L45">server.ts:45</a></li>
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-external">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-external">
 					<a name="app" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> app</h3>
+					<h3>app</h3>
 					<div class="tsd-signature tsd-kind-icon">app<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/gfmio/csam/blob/52d8ccc/src/server.ts#L23">server.ts:23</a></li>
+							<li>Defined in <a href="https://github.com/gfmio/csam/blob/0576515/src/server.ts#L41">server.ts:41</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -182,17 +229,17 @@
 					<div class="tsd-signature tsd-kind-icon">host<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/gfmio/csam/blob/52d8ccc/src/server.ts#L19">server.ts:19</a></li>
+							<li>Defined in <a href="https://github.com/gfmio/csam/blob/0576515/src/server.ts#L36">server.ts:36</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-external">
 					<a name="model" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagPrivate">Private</span> model</h3>
-					<div class="tsd-signature tsd-kind-icon">model<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
+					<div class="tsd-signature tsd-kind-icon">model<span class="tsd-signature-symbol">:</span> <a href="_model_.model.html" class="tsd-signature-type">Model</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/gfmio/csam/blob/52d8ccc/src/server.ts#L25">server.ts:25</a></li>
+							<li>Defined in <a href="https://github.com/gfmio/csam/blob/0576515/src/server.ts#L43">server.ts:43</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -202,7 +249,7 @@
 					<div class="tsd-signature tsd-kind-icon">port<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/gfmio/csam/blob/52d8ccc/src/server.ts#L18">server.ts:18</a></li>
+							<li>Defined in <a href="https://github.com/gfmio/csam/blob/0576515/src/server.ts#L35">server.ts:35</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -212,7 +259,7 @@
 					<div class="tsd-signature tsd-kind-icon">print<wbr>Log<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/gfmio/csam/blob/52d8ccc/src/server.ts#L21">server.ts:21</a></li>
+							<li>Defined in <a href="https://github.com/gfmio/csam/blob/0576515/src/server.ts#L38">server.ts:38</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -222,17 +269,17 @@
 					<div class="tsd-signature tsd-kind-icon">public<wbr>Dir<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/gfmio/csam/blob/52d8ccc/src/server.ts#L20">server.ts:20</a></li>
+							<li>Defined in <a href="https://github.com/gfmio/csam/blob/0576515/src/server.ts#L37">server.ts:37</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-external">
 					<a name="state" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagPrivate">Private</span> state</h3>
-					<div class="tsd-signature tsd-kind-icon">state<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
+					<div class="tsd-signature tsd-kind-icon">state<span class="tsd-signature-symbol">:</span> <a href="_state_.state.html" class="tsd-signature-type">State</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/gfmio/csam/blob/52d8ccc/src/server.ts#L26">server.ts:26</a></li>
+							<li>Defined in <a href="https://github.com/gfmio/csam/blob/0576515/src/server.ts#L44">server.ts:44</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -249,9 +296,14 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/gfmio/csam/blob/52d8ccc/src/server.ts#L65">server.ts:65</a></li>
+									<li>Defined in <a href="https://github.com/gfmio/csam/blob/0576515/src/server.ts#L103">server.ts:103</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Starts the server</p>
+								</div>
+							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
 						</li>
 					</ul>
@@ -266,9 +318,14 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/gfmio/csam/blob/52d8ccc/src/server.ts#L73">server.ts:73</a></li>
+									<li>Defined in <a href="https://github.com/gfmio/csam/blob/0576515/src/server.ts#L114">server.ts:114</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Stops the server</p>
+								</div>
+							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
@@ -329,7 +386,7 @@
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-external">
 								<a href="_server_.server.html#actions" class="tsd-kind-icon">actions</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-external">
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-external">
 								<a href="_server_.server.html#app" class="tsd-kind-icon">app</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-external">
@@ -360,18 +417,6 @@
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported">
-						<a href="../modules/_server_.html#compression" class="tsd-kind-icon">compression</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported">
-						<a href="../modules/_server_.html#express" class="tsd-kind-icon">express</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported">
-						<a href="../modules/_server_.html#tohtml" class="tsd-kind-icon">toHTML</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported">
-						<a href="../modules/_server_.html#require" class="tsd-kind-icon">require</a>
-					</li>
 				</ul>
 			</nav>
 		</div>

@@ -69,6 +69,13 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The State class handling the representation, display and calling the next action.</p>
+					</div>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -88,16 +95,11 @@
 							</ul>
 						</section>
 						<section class="tsd-index-section tsd-is-external">
-							<h3>Properties</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-external"><a href="_state_.state.html#nextaction" class="tsd-kind-icon">next<wbr>Action</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-external"><a href="_state_.state.html#representation" class="tsd-kind-icon">representation</a></li>
-							</ul>
-						</section>
-						<section class="tsd-index-section tsd-is-external">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="_state_.state.html#display" class="tsd-kind-icon">display</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="_state_.state.html#nextaction" class="tsd-kind-icon">next<wbr>Action</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="_state_.state.html#representation" class="tsd-kind-icon">representation</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="_state_.state.html#update" class="tsd-kind-icon">update</a></li>
 							</ul>
 						</section>
@@ -110,128 +112,23 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>State<span class="tsd-signature-symbol">(</span>representation<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span>, nextAction<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_state_.state.html" class="tsd-signature-type">State</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>State<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_state_.state.html" class="tsd-signature-type">State</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/gfmio/csam/blob/52d8ccc/src/state.ts#L10">state.ts:10</a></li>
+									<li>Defined in <a href="https://github.com/gfmio/csam/blob/0576515/src/state.ts#L9">state.ts:9</a></li>
 								</ul>
 							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>representation: <span class="tsd-signature-type">function</span></h5>
-									<ul class="tsd-parameters">
-										<li class="tsd-parameter-siganture">
-											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
-												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>model<span class="tsd-signature-symbol">: </span><a href="_model_.model.html" class="tsd-signature-type">Model</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-											</ul>
-											<ul class="tsd-descriptions">
-												<li class="tsd-description">
-													<h4 class="tsd-parameters-title">Parameters</h4>
-													<ul class="tsd-parameters">
-														<li>
-															<h5>model: <a href="_model_.model.html" class="tsd-signature-type">Model</a></h5>
-														</li>
-													</ul>
-													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-												</li>
-											</ul>
-										</li>
-									</ul>
-								</li>
-								<li>
-									<h5>nextAction: <span class="tsd-signature-type">function</span></h5>
-									<ul class="tsd-parameters">
-										<li class="tsd-parameter-siganture">
-											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
-												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>model<span class="tsd-signature-symbol">: </span><a href="_model_.model.html" class="tsd-signature-type">Model</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-											</ul>
-											<ul class="tsd-descriptions">
-												<li class="tsd-description">
-													<h4 class="tsd-parameters-title">Parameters</h4>
-													<ul class="tsd-parameters">
-														<li>
-															<h5>model: <a href="_model_.model.html" class="tsd-signature-type">Model</a></h5>
-														</li>
-													</ul>
-													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-												</li>
-											</ul>
-										</li>
-									</ul>
-								</li>
-							</ul>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Create a State object.</p>
+								</div>
+							</div>
 							<h4 class="tsd-returns-title">Returns <a href="_state_.state.html" class="tsd-signature-type">State</a></h4>
 						</li>
 					</ul>
-				</section>
-			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-external">
-				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-external">
-					<a name="nextaction" class="tsd-anchor"></a>
-					<h3>next<wbr>Action</h3>
-					<div class="tsd-signature tsd-kind-icon">next<wbr>Action<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/gfmio/csam/blob/52d8ccc/src/state.ts#L10">state.ts:10</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-type-declaration">
-						<h4>Type declaration</h4>
-						<ul class="tsd-parameters">
-							<li class="tsd-parameter-siganture">
-								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property tsd-is-not-exported">
-									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>model<span class="tsd-signature-symbol">: </span><a href="_model_.model.html" class="tsd-signature-type">Model</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-								</ul>
-								<ul class="tsd-descriptions">
-									<li class="tsd-description">
-										<h4 class="tsd-parameters-title">Parameters</h4>
-										<ul class="tsd-parameters">
-											<li>
-												<h5>model: <a href="_model_.model.html" class="tsd-signature-type">Model</a></h5>
-											</li>
-										</ul>
-										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-external">
-					<a name="representation" class="tsd-anchor"></a>
-					<h3>representation</h3>
-					<div class="tsd-signature tsd-kind-icon">representation<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/gfmio/csam/blob/52d8ccc/src/state.ts#L9">state.ts:9</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-type-declaration">
-						<h4>Type declaration</h4>
-						<ul class="tsd-parameters">
-							<li class="tsd-parameter-siganture">
-								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property tsd-is-not-exported">
-									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>model<span class="tsd-signature-symbol">: </span><a href="_model_.model.html" class="tsd-signature-type">Model</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-								</ul>
-								<ul class="tsd-descriptions">
-									<li class="tsd-description">
-										<h4 class="tsd-parameters-title">Parameters</h4>
-										<ul class="tsd-parameters">
-											<li>
-												<h5>model: <a href="_model_.model.html" class="tsd-signature-type">Model</a></h5>
-											</li>
-										</ul>
-										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group tsd-is-external">
@@ -246,13 +143,81 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/gfmio/csam/blob/52d8ccc/src/state.ts#L20">state.ts:20</a></li>
+									<li>Defined in <a href="https://github.com/gfmio/csam/blob/0576515/src/state.ts#L37">state.ts:37</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Display method for rendering the view
+									Gets overwritten by Client and Server respectively</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>view: <span class="tsd-signature-type">any</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
+					<a name="nextaction" class="tsd-anchor"></a>
+					<h3>next<wbr>Action</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">next<wbr>Action<span class="tsd-signature-symbol">(</span>model<span class="tsd-signature-symbol">: </span><a href="_model_.model.html" class="tsd-signature-type">Model</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/gfmio/csam/blob/0576515/src/state.ts#L29">state.ts:29</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Compute and trigger the next action of the application.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>model: <a href="_model_.model.html" class="tsd-signature-type">Model</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The updated model from which the next action is computed and trigged.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
+					<a name="representation" class="tsd-anchor"></a>
+					<h3>representation</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">representation<span class="tsd-signature-symbol">(</span>model<span class="tsd-signature-symbol">: </span><a href="_model_.model.html" class="tsd-signature-type">Model</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/gfmio/csam/blob/0576515/src/state.ts#L21">state.ts:21</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Compute the representation of the updated model.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>model: <a href="_model_.model.html" class="tsd-signature-type">Model</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The updated model from which the representation is computed</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -269,13 +234,21 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/gfmio/csam/blob/52d8ccc/src/state.ts#L24">state.ts:24</a></li>
+									<li>Defined in <a href="https://github.com/gfmio/csam/blob/0576515/src/state.ts#L45">state.ts:45</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Update method triggering the representation and the next action to be triggered</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>model: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The new model</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -335,14 +308,14 @@
 							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-external">
 								<a href="_state_.state.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-external">
-								<a href="_state_.state.html#nextaction" class="tsd-kind-icon">next<wbr>Action</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-external">
-								<a href="_state_.state.html#representation" class="tsd-kind-icon">representation</a>
-							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
 								<a href="_state_.state.html#display" class="tsd-kind-icon">display</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
+								<a href="_state_.state.html#nextaction" class="tsd-kind-icon">next<wbr>Action</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
+								<a href="_state_.state.html#representation" class="tsd-kind-icon">representation</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
 								<a href="_state_.state.html#update" class="tsd-kind-icon">update</a>

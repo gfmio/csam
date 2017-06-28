@@ -5,6 +5,7 @@
   "author": "Frédérique Mittelstaedt <frederique@gfm.io>",
   "main": "index.js",
   "scripts": {
+    "build": "./node_modules/.bin/tsc",
     "docs": "./node_modules/.bin/typedoc --theme default --name CSAM documentation --out ./docs ./src/**/*.ts",
     "lint": "./node_modules/.bin/tslint -c tslint.json 'src/**/*.ts'"
   },
@@ -20,6 +21,5 @@
     "jshint": "^2.9.5",
     "tslint": "^5.4.3",
     "typedoc": "^0.7.1"
-  },
-  "jshintConfig": {}
+  }
 }

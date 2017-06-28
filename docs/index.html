@@ -69,6 +69,34 @@
 				<p>Memory footprint so far: 16.5 MB for one instance
 				Response time &lt; 40ms</p>
 				<h1 id="license-mit">License: MIT</h1>
+				<h1 id="to-do">To Do</h1>
+				<ul>
+					<li>Documentation<ul>
+							<li>csam.ts</li>
+							<li>model.ts</li>
+							<li>server.ts</li>
+							<li>client.ts</li>
+							<li>actions.ts</li>
+							<li>component.ts</li>
+						</ul>
+					</li>
+					<li>Readme</li>
+					<li>Actions<ul>
+							<li>Are there any useful default actions to be included here (e.g. transitionTo)?</li>
+						</ul>
+					</li>
+					<li>Examples<ul>
+							<li>A type script example including all config to build the project</li>
+							<li>A JavaScript example including all config to build and run the project</li>
+						</ul>
+					</li>
+					<li>How can we decouple the history API events from specific model names?</li>
+					<li>Can we get rid off the global <code>present</code> in <code>Model</code> without impacting the usability of actions?</li>
+					<li>Better, stricter type declarations</li>
+					<li>Should the API server be integrated here directly or in a separate project?</li>
+					<li>Actions with before, around, after methods for aspect orientation and middleware (logging, authentication, data fetching, caching)</li>
+					<li>Default solutions for authentication, access control, ...?</li>
+				</ul>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
