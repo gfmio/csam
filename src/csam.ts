@@ -5,7 +5,7 @@
 
 export { Model } from "./model";
 export { State } from "./state";
-export * from "./actions";
+export { ActionRegistry } from "./actions";
 
 export { Server } from "./server";
 export { Client } from "./client";
