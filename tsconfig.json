@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "ES3",
+        "outDir": "./lib",
+        "noImplicitAny": true,
+        "sourceMap": true,
+        "strictNullChecks": true,
+        "declaration": true,
+        "removeComments": false,
+        "noUnusedLocals": true,
+
+        "jsx": "react",
+        "jsxFactory": "c",
+
+        "lib": [
+            "dom",
+            "es5",
+            "es2015.core"
+        ]
+    },
+    "files": [
+        "src/csam.ts"
+    ]
+}
