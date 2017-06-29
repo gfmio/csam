@@ -1,5 +1,5 @@
 /**
- * The modyke containing the Model class that stores the state machine driving the application.
+ * The module containing the Model class that stores the state machine driving the application.
  * @module csam/model
  */
 import { State } from "./state";

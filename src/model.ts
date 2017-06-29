@@ -1,5 +1,5 @@
 /**
- * The modyke containing the Model class that stores the state machine driving the application.
+ * The module containing the Model class that stores the state machine driving the application.
  * @module csam/model
  */
 
@@ -17,9 +17,6 @@ export class Model {
    */
   constructor(state: State) {
     this.state = state;
-
-    // GLOBAL present declaration. To do: Remove global variable if possible.
-    // present = this.present;
   }
 
   /*
