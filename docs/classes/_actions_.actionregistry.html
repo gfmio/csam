@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>&quot;component&quot; | CSAM</title>
+	<title>ActionRegistry | CSAM</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,85 +56,136 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="_component_.html">&quot;component&quot;</a>
+					<a href="../modules/_actions_.html">&quot;actions&quot;</a>
+				</li>
+				<li>
+					<a href="_actions_.actionregistry.html">ActionRegistry</a>
 				</li>
 			</ul>
-			<h1>External module &quot;component&quot;</h1>
+			<h1>Class ActionRegistry</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<section class="tsd-panel tsd-comment">
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>Component module.</p>
-					</div>
-					<dl class="tsd-comment-tags">
-						<dt>module</dt>
-						<dd><p>csam/component</p>
-						</dd>
-					</dl>
-				</div>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">ActionRegistry</span>
+					</li>
+				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section tsd-is-external">
-							<h3>Functions</h3>
+							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-external"><a href="_component_.html#component" class="tsd-kind-icon">component</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-external"><a href="_actions_.actionregistry.html#constructor" class="tsd-kind-icon">constructor</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section tsd-is-external">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="_actions_.actionregistry.html#attachmodel" class="tsd-kind-icon">attach<wbr>Model</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-external"><a href="_actions_.actionregistry.html#present" class="tsd-kind-icon">present</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="_actions_.actionregistry.html#transitionto" class="tsd-kind-icon">transition<wbr>To</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group tsd-is-external">
-				<h2>Functions</h2>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-external">
-					<a name="component" class="tsd-anchor"></a>
-					<h3>component</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">component<span class="tsd-signature-symbol">(</span>component<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">function</span>, props<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span>, children<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+				<h2>Constructors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class tsd-is-external">
+					<a name="constructor" class="tsd-anchor"></a>
+					<h3>constructor</h3>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Action<wbr>Registry<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_actions_.actionregistry.html" class="tsd-signature-type">ActionRegistry</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/gfmio/csam/blob/a046f1b/src/component.ts#L26">component.ts:26</a></li>
+									<li>Defined in <a href="https://github.com/gfmio/csam/blob/a046f1b/src/actions.ts#L4">actions.ts:4</a></li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Renders a component with props and children using Snabbdom</p>
-								</div>
-							</div>
+							<h4 class="tsd-returns-title">Returns <a href="_actions_.actionregistry.html" class="tsd-signature-type">ActionRegistry</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-external">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
+					<a name="attachmodel" class="tsd-anchor"></a>
+					<h3>attach<wbr>Model</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">attach<wbr>Model<span class="tsd-signature-symbol">(</span>model<span class="tsd-signature-symbol">: </span><a href="_model_.model.html" class="tsd-signature-type">Model</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/gfmio/csam/blob/a046f1b/src/actions.ts#L9">actions.ts:9</a></li>
+								</ul>
+							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>component: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">function</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>The component to be rendered, which needs to
-											either be a string containing a valid HTML tag
-										or a functional component.</p>
-									</div>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> props: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> =&nbsp;{ /**/ }</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>The props object</p>
-									</div>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> children: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[]</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>The children of the component</p>
-									</div>
+									<h5>model: <a href="_model_.model.html" class="tsd-signature-type">Model</a></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-external">
+					<a name="present" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> present</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">present<span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/gfmio/csam/blob/a046f1b/src/actions.ts#L17">actions.ts:17</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>data: <span class="tsd-signature-type">any</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
+					<a name="transitionto" class="tsd-anchor"></a>
+					<h3>transition<wbr>To</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">transition<wbr>To<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/gfmio/csam/blob/a046f1b/src/actions.ts#L13">actions.ts:13</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>url: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -150,60 +201,78 @@
 						<span>Internals</span>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_csam_.html">"csam"</a>
+						<a href="../modules/_csam_.html">"csam"</a>
 					</li>
 					<li class="label tsd-is-external">
 						<span>Externals</span>
 					</li>
-					<li class=" tsd-kind-external-module tsd-is-external">
-						<a href="_actions_.html">"actions"</a>
-					</li>
-					<li class=" tsd-kind-external-module tsd-is-external">
-						<a href="_client_.html">"client"</a>
-					</li>
 					<li class="current tsd-kind-external-module tsd-is-external">
-						<a href="_component_.html">"component"</a>
+						<a href="../modules/_actions_.html">"actions"</a>
 					</li>
 					<li class=" tsd-kind-external-module tsd-is-external">
-						<a href="_components_.html">"components"</a>
+						<a href="../modules/_client_.html">"client"</a>
 					</li>
 					<li class=" tsd-kind-external-module tsd-is-external">
-						<a href="_components_application_.html">"components/application"</a>
+						<a href="../modules/_component_.html">"component"</a>
 					</li>
 					<li class=" tsd-kind-external-module tsd-is-external">
-						<a href="_components_html_.html">"components/html"</a>
+						<a href="../modules/_components_.html">"components"</a>
 					</li>
 					<li class=" tsd-kind-external-module tsd-is-external">
-						<a href="_electron_.html">"electron"</a>
+						<a href="../modules/_components_application_.html">"components/application"</a>
 					</li>
 					<li class=" tsd-kind-external-module tsd-is-external">
-						<a href="_helpers_flatten_.html">"helpers/flatten"</a>
+						<a href="../modules/_components_html_.html">"components/html"</a>
 					</li>
 					<li class=" tsd-kind-external-module tsd-is-external">
-						<a href="_helpers_html_tag_wrapper_.html">"helpers/html-<wbr>tag-<wbr>wrapper"</a>
+						<a href="../modules/_electron_.html">"electron"</a>
 					</li>
 					<li class=" tsd-kind-external-module tsd-is-external">
-						<a href="_helpers_inithistoryapi_.html">"helpers/init<wbr>History<wbr>Api"</a>
+						<a href="../modules/_helpers_flatten_.html">"helpers/flatten"</a>
 					</li>
 					<li class=" tsd-kind-external-module tsd-is-external">
-						<a href="_model_.html">"model"</a>
+						<a href="../modules/_helpers_html_tag_wrapper_.html">"helpers/html-<wbr>tag-<wbr>wrapper"</a>
 					</li>
 					<li class=" tsd-kind-external-module tsd-is-external">
-						<a href="_react_native_client_.html">"react-<wbr>native-<wbr>client"</a>
+						<a href="../modules/_helpers_inithistoryapi_.html">"helpers/init<wbr>History<wbr>Api"</a>
 					</li>
 					<li class=" tsd-kind-external-module tsd-is-external">
-						<a href="_server_.html">"server"</a>
+						<a href="../modules/_model_.html">"model"</a>
 					</li>
 					<li class=" tsd-kind-external-module tsd-is-external">
-						<a href="_state_.html">"state"</a>
+						<a href="../modules/_react_native_client_.html">"react-<wbr>native-<wbr>client"</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/_server_.html">"server"</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/_state_.html">"state"</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-external">
-						<a href="_component_.html#component" class="tsd-kind-icon">component</a>
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-class tsd-parent-kind-external-module tsd-is-external">
+						<a href="_actions_.actionregistry.html" class="tsd-kind-icon">Action<wbr>Registry</a>
+						<ul>
+							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-external">
+								<a href="_actions_.actionregistry.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
+								<a href="_actions_.actionregistry.html#attachmodel" class="tsd-kind-icon">attach<wbr>Model</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-external">
+								<a href="_actions_.actionregistry.html#present" class="tsd-kind-icon">present</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
+								<a href="_actions_.actionregistry.html#transitionto" class="tsd-kind-icon">transition<wbr>To</a>
+							</li>
+						</ul>
 					</li>
+				</ul>
+				<ul class="after-current">
 				</ul>
 			</nav>
 		</div>
