@@ -26,13 +26,18 @@ import { flatten } from "./helpers/flatten";
 export function component(component: string | ((props: any, children: any[]) => any),
                           props: any = { /**/ },
                           children: any[] = []): any {
+  if (arguments.length > 2) {
+    children = Array.prototype.slice.call(arguments, 2);
+    // children = arguments.slice(2);
+  }
+
   // Ensure that props is actually an object to prevent errors with Snabbdom
   if (props !== Object(props)) {
     props = {};
   }
 
   // Ensure that children is actually an array to prevent errors with Snabbdom
-  if (children !== Object(children)) {
+  if (!(children instanceof Array)) {
     children = [];
   }
 
@@ -53,5 +58,10 @@ export function component(component: string | ((props: any, children: any[]) => 
   props = { attrs: props, on: onObj, style: styleObj };
   children = flatten(children);
 
-  return h(component, props, children);
+  if (component instanceof Function) {
+    return component(props, children)
+  } else {
+    // console.log("blaaaa", component, props, children);
+    return h(component, props, children);
+  }
 }
