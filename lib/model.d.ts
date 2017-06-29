@@ -5,8 +5,7 @@
 import { State } from "./state";
 /** The Model class describing the state machine driving CSAM applications. */
 export declare class Model {
-    model: any;
     state: State;
-    constructor(model: any, state: State);
+    constructor(state: State);
     present(data: any): void;
 }

@@ -5,24 +5,21 @@
 
 import { State } from "./state";
 
-declare var present: any;
+// declare var present: any;
 
 /** The Model class describing the state machine driving CSAM applications. */
 export class Model {
-  public model: any;
   public state: State;
 
   /*
    * Create a Model object.
-   * @param { Model } model - A model data object.
    * @param { State } state - The state object.
    */
-  constructor(model: any, state: State) {
-    this.model = model;
+  constructor(state: State) {
     this.state = state;
 
     // GLOBAL present declaration. To do: Remove global variable if possible.
-    present = this.present;
+    // present = this.present;
   }
 
   /*
@@ -31,8 +28,7 @@ export class Model {
    * @param { State } state - The state object.
    */
   public present(data: any) {
-    if (this.model.present(data)) {
-      this.state.update(this.model);
-    }
+    Object.assign(this, data);
+    this.state.update(this);
   }
 }
