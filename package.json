@@ -1,6 +1,6 @@
 {
   "name": "csam",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "description": "csam - a fast and minimal component-based web framework based on the SAM (state-action-model) pattern",
   "author": "Frédérique Mittelstaedt <frederique@gfm.io>",
   "main": "index.js",

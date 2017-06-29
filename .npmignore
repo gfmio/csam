@@ -1,9 +1,11 @@
+docs
+examples
+src
 node_modules
 npm-debug.log
 
-example
 todo.md
-src
+notes.md
 
 # Created by https://www.gitignore.io/api/osx,sass,node
 
