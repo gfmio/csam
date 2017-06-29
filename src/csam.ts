@@ -3,9 +3,15 @@
  * @module csam
  */
 
-export { Client } from "./client";
-export { Server } from "./server";
 export { Model } from "./model";
 export { State } from "./state";
 export * from "./actions";
+
+export { Server } from "./server";
+export { Client } from "./client";
+export { ElectronClient } from "./electron";
+export { ReactNativeClient } from "./react-native-client";
+
 export { component } from "./component";
+
+export * from "./components";

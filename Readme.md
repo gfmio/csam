@@ -21,4 +21,4 @@ Response time < 40ms
 * Better, stricter type declarations
 * Should the API server be integrated here directly or in a separate project?
 * Actions with before, around, after methods for aspect orientation and middleware (logging, authentication, data fetching, caching)
-* Default solutions for authentication, access control, ...?
+* Default solutions for authentication, access control, payments, ...
