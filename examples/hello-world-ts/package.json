@@ -4,7 +4,7 @@
   "description": "",
   "main": "dist/server.js",
   "scripts": {
-    "build": "./node_modules/.bin/tsc && webpack",
+    "build": "./node_modules/.bin/tsc --strict && webpack",
     "clean": "rm -rf ./dist",
     "docs": "./node_modules/.bin/typedoc --theme default --name CSAM documentation --out ./docs ./src/**/*.ts",
     "lint": "./node_modules/.bin/tslint -c tslint.json 'src/**/*.ts'",

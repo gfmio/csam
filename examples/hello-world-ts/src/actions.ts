@@ -1,10 +1,5 @@
 
-import { HelloWorldModel } from "./model";
+import { ActionRegistry } from "../../../lib/actions";
 
-export function helloWorldActions(model: HelloWorldModel) {
-  return {
-    transitionTo: (url: string): void => {
-      model.present({ currentUrl: url });
-    },
-  };
+export class HelloWorldActions extends ActionRegistry {
 }

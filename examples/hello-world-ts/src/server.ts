@@ -1,12 +1,13 @@
 
 import { Server } from "../../../lib/server";
-import { helloWorldActions } from "./actions";
+import { HelloWorldActions } from "./actions";
 import { HelloWorldModel } from "./model";
 import { HelloWorldState } from "./state";
 
-const state = new HelloWorldState();
+const actions = new HelloWorldActions();
+const state = new HelloWorldState(actions);
 const model = new HelloWorldModel(state);
-const actions = helloWorldActions(model);
+actions.attachModel(model);
 
 const s = new Server(
   model,
