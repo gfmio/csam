@@ -1,29 +1,30 @@
 
 import { component as c } from "../component";
+import { Body, Head, Html, Link, Meta, Script, Title } from "./html";
 
 export function Application(props: any, children: any[]) {
   props = props || {};
   children = children || [];
 
   return (
-    <html>
-      <head>
-        <meta charset="utf-8" />
-        { props.title !== undefined ? <title>{ props.title }</title> : "" }
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta http-equiv="Content-Language" content="en" />
-        <meta name="viewport" content="width=device-width" />
+    <Html>
+      <Head>
+        <Meta charset="utf-8" />
+        { props.title !== undefined ? <Title>{ props.title }</Title> : [] }
+        <Meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <Meta http-equiv="Content-Language" content="en" />
+        <Meta name="viewport" content="width=device-width" />
 
-        { props.description !== undefined ? <meta name="description" content={ props.description } /> : "" }
-        { props.keywords !== undefined ? <meta name="keywords" content={ props.keywords } /> : "" }
+        { props.description !== undefined ? <Meta name="description" content={ props.description } /> : [] }
+        { props.keywords !== undefined ? <Meta name="keywords" content={ props.keywords } /> : [] }
 
-        <link href="/css/csam.css" media="all" rel="stylesheet" />
-        { props.favicon !== undefined ? <link rel="icon" type="image/png" href={ props.favicon } /> : "" }
-      </head>
-      <body>
+        <Link href="/css/csam.css" media="all" rel="stylesheet" />
+        { props.favicon !== undefined ? <Link rel="icon" type="image/png" href={ props.favicon } /> : [] }
+      </Head>
+      <Body>
         { children }
-        <script src="/js/app.js" type="text/javascript"></script>
-      </body>
-    </html>
+        <Script src="/js/app.js" type="text/javascript"></Script>
+      </Body>
+    </Html>
   );
 }
