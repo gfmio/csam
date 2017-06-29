@@ -41,26 +41,26 @@ export function component(component: string | ((props: any, children: any[]) => 
     children = [];
   }
 
-  // Extract on for snabbdom
-  let onObj = {};
-  if ("on" in props) {
-    onObj = props.on;
-    delete props.on;
-  }
-
-  // Extract style for snabbdom
-  let styleObj = {};
-  if ("style" in props) {
-    styleObj = props.style;
-    delete props.style;
-  }
-
-  props = { attrs: props, on: onObj, style: styleObj };
-  children = flatten(children);
-
   if (component instanceof Function) {
-    return component(props, children)
+    return component(props, children);
   } else {
+    // Extract on for snabbdom
+    let onObj = {};
+    if ("on" in props) {
+      onObj = props.on;
+      delete props.on;
+    }
+
+    // Extract style for snabbdom
+    let styleObj = {};
+    if ("style" in props) {
+      styleObj = props.style;
+      delete props.style;
+    }
+
+    props = { attrs: props, on: onObj, style: styleObj };
+    children = flatten(children);
+
     // console.log("blaaaa", component, props, children);
     return h(component, props, children);
   }
