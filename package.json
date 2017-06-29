@@ -5,13 +5,20 @@
   "author": "Frédérique Mittelstaedt <frederique@gfm.io>",
   "main": "index.js",
   "scripts": {
-    "build": "./node_modules/.bin/tsc",
+    "build": "./node_modules/.bin/tsc --strict",
+    "clean": "rm -rf ./lib ./docs",
+    "clean:docs": "rm -rf ./docs",
+    "clean:lib": "rm -rf ./lib",
     "docs": "./node_modules/.bin/typedoc --theme default --name CSAM documentation --out ./docs ./src/**/*.ts",
     "lint": "./node_modules/.bin/tslint -c tslint.json 'src/**/*.ts'"
   },
   "dependencies": {
+    "@types/react": "^15.0.33",
     "compression": "^1.6.2",
+    "electron": "^1.6.11",
     "express": "^4.13.3",
+    "react": "16.0.0-alpha.12",
+    "react-native": "^0.45.1",
     "snabbdom": "^0.5.3",
     "snabbdom-to-html": "^3.0.0-beta.1",
     "snabbdom-virtualize": "^0.6.0"

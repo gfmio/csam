@@ -9,6 +9,10 @@
         "declaration": true,
         "removeComments": false,
         "noUnusedLocals": true,
+
+        "jsx": "react",
+        "jsxFactory": "c",
+
         "lib": [
             "dom",
             "es5",
