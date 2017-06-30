@@ -3,5 +3,5 @@ export declare class ActionRegistry {
     constructor();
     attachModel(model: Model): void;
     transitionTo(url: string): void;
-    private present;
+    protected present: (data: any) => void;
 }
