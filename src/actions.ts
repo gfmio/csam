@@ -14,5 +14,5 @@ export class ActionRegistry {
     this.present({ currentUrl: url });
   }
 
-  private present: (data: any) => void = (data: any) => { /**/ };
+  protected present: (data: any) => void = (data: any) => { /**/ };
 }
