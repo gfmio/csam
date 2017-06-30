@@ -10,7 +10,7 @@ const headingStyles = Object.assign({}, noPadding, noMargin);
 
 const appStyles = Object.assign({}, noPadding, noMargin, {
   fontFamily: "'Source Han Sans', 'Myriad Arabic', 'Helvetica Neue', Arial, Helvetica, sans-serif",
-};
+});
 
 const h1Styles = Object.assign({}, headingStyles, {
   color: "#FF0000",
