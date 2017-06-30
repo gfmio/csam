@@ -21,7 +21,7 @@ export function Application(props: any, children: any[]) {
         <Link href="/css/csam.css" media="all" rel="stylesheet" />
         { props.favicon !== undefined ? <Link rel="icon" type="image/png" href={ props.favicon } /> : [] }
       </Head>
-      <Body>
+      <Body style={ (props.style !== undefined ? props.style : {}) }>
         { children }
         <Script src="/js/app.js" type="text/javascript"></Script>
       </Body>
