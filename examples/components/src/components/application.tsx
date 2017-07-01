@@ -6,11 +6,12 @@ import { Parallax } from "../../../../lib/components/parallax";
 import { Text } from "../../../../lib/components/text";
 import { View } from "../../../../lib/components/view";
 import { LoremIpsum } from "./loremipsum";
+import { Playground } from "./playground";
 
 const baseLineHeight = 1.618;
 
-const noPadding = { padding: 0 };
-const noMargin = { margin: 0 };
+const noPadding = { paddingLeft: 0, paddingTop: 0, paddingRight: 0, paddingBottom: 0 };
+const noMargin = { marginLeft: 0, marginTop: 0, marginRight: 0, marginBottom: 0 };
 
 const oneLineHeightPadding = { padding: `${baseLineHeight}rem` };
 const oneLineHeightPaddingTop = { paddingTop: `${baseLineHeight}rem` };
@@ -94,6 +95,10 @@ export function Application(props: any, children: any[]) {
             Hello World.
           </H1>
         </Parallax>
+
+        <View style={ { ...oneLineHeightPadding, fontSize: "3vmin", margin: "0 auto", maxWidth: "33em" } }>
+          <Playground />
+        </View>
 
         <View style={ { ...oneLineHeightPadding, fontSize: "3vmin", margin: "0 auto", maxWidth: "33em" } }>
           <H1 style={ h1Styles }>To Do</H1>

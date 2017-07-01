@@ -1,4 +1,5 @@
 import { component as c } from "../component";
+import { View } from "./view";
 
 export function Parallax(props: any, children: any[]) {
   props = props || {};
@@ -15,8 +16,8 @@ export function Parallax(props: any, children: any[]) {
   const style = {...defaultStyle, ...props.style};
 
   return (
-    <div style={ style }>
+    <View style={ style }>
       { children }
-    </div>
+    </View>
   );
 }
