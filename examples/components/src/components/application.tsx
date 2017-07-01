@@ -3,7 +3,7 @@ import { component as c } from "../../../../lib/component";
 import { Application as App } from "../../../../lib/components/application";
 import { Footer, H1, Header } from "../../../../lib/components/html";
 import { Parallax } from "../../../../lib/components/parallax";
-import { Text } from "../../../../lib/components/text";
+// import { Text } from "../../../../lib/components/text";
 import { View } from "../../../../lib/components/view";
 import { LoremIpsum } from "./loremipsum";
 
@@ -21,16 +21,17 @@ const appStyles = {
   color: "#111111",
   display: "flex",
   flexDirection: "column",
-  //
-  fontFamily: "'Source Han Sans', 'Myriad Arabic', 'Myriad עברית Regular', 'Helvetica Neue', Helvetica, Tahoma, Arial, sans-serif",
+  // caption, icon, menu, message-box, small-caption, status-bar",
+  // https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/
+  fontFamily: "'Source Han Sans', 'Myriad Arabic', 'Myriad עברית Regular', 'San Francisco', -apple-system, system-ui, '.SFNSText-Regular', BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', Helvetica, Tahoma, Arial, icon, sans-serif",
   lineHeight: baseLineHeight,
   minHeight: "100%",
 };
 
-const pStyles = {
-  ...noPadding,
-  ...noMargin,
-};
+// const pStyles = {
+//   ...noPadding,
+//   ...noMargin,
+// };
 
 const headingStyles = {
   ...noPadding,
@@ -38,7 +39,8 @@ const headingStyles = {
   fontWeight: "200",
 };
 
-const h1Styles = { ...headingStyles,
+const h1Styles = {
+  ...headingStyles,
   fontSize: "2.0rem",
   lineHeight: `${2 * 1.618}rem`,
 };
