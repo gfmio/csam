@@ -7,7 +7,7 @@ export function Application(props: any, children: any[]) {
   children = children || [];
 
   return (
-    <Html>
+    <Html style={{ height: "100%", minHeight: "100%" }}>
       <Head>
         <Meta charset="utf-8" />
         { props.title !== undefined ? <Title>{ props.title }</Title> : [] }
