@@ -28,6 +28,7 @@ const appStyles = {
   fontFamily: "'San Francisco', -apple-system, system-ui, '.SFNSText-Regular', BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', icon, sans-serif",
   lineHeight: baseLineHeight,
   minHeight: "100%",
+  wordWrap: "break-word"
 };
 
 // const pStyles = {
@@ -94,7 +95,7 @@ export function Application(props: any, children: any[]) {
           </H1>
         </Parallax>
 
-        <View style={ { ...oneLineHeightPaddingTop, fontSize: "3vmin", margin: "0 auto", maxWidth: "33em" } }>
+        <View style={ { ...oneLineHeightPadding, fontSize: "3vmin", margin: "0 auto", maxWidth: "33em" } }>
           <H1 style={ h1Styles }>To Do</H1>
           <Text>
             An overview of important and potential design elements from other design frameworks.
