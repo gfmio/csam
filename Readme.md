@@ -25,3 +25,5 @@ Response time < 40ms
 
 * There seems to be some issue with the TSX spread operator when trying to apply styles.
 * Find uniform sample text and all possible scripts. Perhaps Article 1. of the Universal Declaration of Human Rights? (All human beings are born free and equal in dignity and rights. They are endowed with reason and conscience and should act towards one another in a spirit of brotherhood.) http://www.un.org/en/universal-declaration-human-rights/index.html
+
+* React Native psuedo selectors: https://github.com/reactjs/react-future/issues/13
