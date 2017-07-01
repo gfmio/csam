@@ -3,7 +3,7 @@ var webpack = require('webpack');
 // var CopyWebpackPlugin = require('copy-webpack-plugin');
 var AwesomeTypescriptLoader = require('awesome-typescript-loader');
 var tsc = require('typescript-compiler');
-// const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 // var tsConfig = require('./tsconfig.json');
 // tsc.compile(['./src/server.ts'], [], tsConfig, function(e){ console.log(e.formattedMessage); })
@@ -58,6 +58,10 @@ module.exports = {
     //     // });
     //   }
     // }]),
+    new CopyWebpackPlugin([{
+      from: './public',
+      to: './public'
+    }]),
     new webpack.optimize.UglifyJsPlugin({
       minimize: false,
       compress: { warnings: false }
