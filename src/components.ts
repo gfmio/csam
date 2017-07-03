@@ -4,3 +4,5 @@ export * from "./components/html";
 export { Parallax } from "./components/parallax";
 export { Text } from "./components/text";
 export { View } from "./components/view";
+export { Badge } from "./components/badge";
+export { Breadcrumb } from "./components/breadcrumb";
