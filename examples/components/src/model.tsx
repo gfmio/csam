@@ -59,6 +59,11 @@ export class HelloWorldModel extends Model {
     return {
       component: (
         <Application>
+          <style>
+            { /* This sets the font-size to 3vmin when the body is so wide / high that the font size is at least 16px, i.e. if 3vmin = 3% of the smaller one of screen width and height is at least 16px.*/ }
+            { `@media (min-width: ${16*100/3}px) and (min-height: ${16*100/3}px) { html, body { font-size: 3vmin; }}` }
+
+          </style>
           <Header style={{ background: designModel.colors.black, color: designModel.colors.white, padding: designModel.defaultPadding }}>
             <H1>CSAM Components</H1>
           </Header>
