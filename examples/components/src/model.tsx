@@ -7,6 +7,10 @@ import { component as c } from "../../../lib/component";
 import { designModel, html, Application, View, Text, Parallax } from "./components/core";
 import { LoremIpsum } from "./components/loremipsum";
 
+import { Accordion } from "../../../lib/components/accordion";
+import { Badge } from "../../../lib/components/badge";
+import { Breadcrumb } from "../../../lib/components/breadcrumb";
+
 const Header = html.Header;
 const Footer = html.Footer;
 const H1 = html.H1;
@@ -91,6 +95,29 @@ export class HelloWorldModel extends Model {
               <Text>Regular text</Text>
               <H6>H6</H6>
               <Text>Regular text</Text>
+
+              <H2>Badge</H2>
+
+              <Badge>200</Badge>
+              <Badge>Text Demo</Badge>
+
+              <H2>Breadcrumb</H2>
+
+              <Breadcrumb>
+                <a href="#" style={ {color: "red"} }>Test</a>
+                <a href="#">Demo</a>
+                <a href="#">Link</a>
+              </Breadcrumb>
+
+              <H2>Accordion</H2>
+
+              <Accordion content={
+                [
+                  {title: "Item 1", content: (<Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</Text>), open: true},
+                  {title: "Item 2", content: (<Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</Text>), open: false},
+                  {title: "Item 3", content: (<Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</Text>), open: false}
+                ]
+              } />
 
               <H2>Figures</H2>
               <Figure>
