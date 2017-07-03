@@ -2,9 +2,9 @@
 import { component as c } from "../../../../lib/component";
 import { Application as _Application } from "../../../../lib/components/application";
 import * as _html from "../../../../lib/components/html";
+import { Parallax as _Parallax } from "../../../../lib/components/parallax";
 import { Text as _Text } from "../../../../lib/components/text";
 import { View as _View } from "../../../../lib/components/view";
-import { Parallax as _Parallax } from "../../../../lib/components/parallax";
 
 //
 // Helpers
@@ -134,14 +134,30 @@ export class DesignModel {
   public asideStyles = {};
 
   public figureStyles = {
-    ...this.noPadding,
     ...this.noMargin,
+    paddingBottom: this.defaultPadding,
+    paddingLeft: this.defaultPadding,
+    paddingRight: this.defaultPadding,
+    paddingTop: this.defaultPadding,
+  };
+  public figcaptionStyles = {
+    fontWeight: 600,
+    marginTop: this.defaultPadding,
   };
   public imgStyles = {
     ...this.noPadding,
     ...this.noMargin,
     maxWidth: "100%",
     width: "100%",
+  };
+
+  public videoStyles = {
+    ...this.noPadding,
+    ...this.noMargin,
+  };
+  public audioStyles = {
+    ...this.noPadding,
+    ...this.noMargin,
   };
 
   public emStyles = {
@@ -156,6 +172,23 @@ export class DesignModel {
   public parallaxStyles = {
   };
 
+  public ulStyles = {
+    ...this.noMargin,
+  };
+  public olStyles = {
+    ...this.noMargin,
+  };
+  public liStyles = {
+  };
+  public dlStyles = {
+    ...this.noMargin,
+  };
+  public dtStyles = {
+    fontWeight: 600,
+  };
+  public ddStyles = {
+    ...this.noMargin
+  };
 }
 
 // Lists
@@ -177,7 +210,12 @@ export const html = {
   A: addDefaultProps(_html.A, { style: designModel.aStyles }),
   Article: addDefaultProps(_html.Article, { style: designModel.articleStyles }),
   Aside: addDefaultProps(_html.Aside, { style: designModel.asideStyles }),
+  Audio: addDefaultProps(_html.Audio, { style: designModel.audioStyles }),
+  Dd: addDefaultProps(_html.Dd, { style: designModel.ddStyles }),
+  Dl: addDefaultProps(_html.Dl, { style: designModel.dlStyles }),
+  Dt: addDefaultProps(_html.Dt, { style: designModel.dtStyles }),
   Em: addDefaultProps(_html.Em, { style: designModel.emStyles }),
+  Figcaption: addDefaultProps(_html.Figcaption, { style: designModel.figcaptionStyles }),
   Figure: addDefaultProps(_html.Figure, { style: designModel.figureStyles }),
   Footer: addDefaultProps(_html.Footer, { style: designModel.footerStyles }),
   H1: addDefaultProps(_html.H1, { style: designModel.h1Styles }),
@@ -188,10 +226,14 @@ export const html = {
   H6: addDefaultProps(_html.H6, { style: designModel.h6Styles }),
   Header: addDefaultProps(_html.Header, { style: designModel.headerStyles }),
   Img: addDefaultProps(_html.Img, { style: designModel.imgStyles }),
+  Li: addDefaultProps(_html.Li, { style: designModel.liStyles }),
   Nav: addDefaultProps(_html.Nav, { style: designModel.navStyles }),
+  Ol: addDefaultProps(_html.Ol, { style: designModel.olStyles }),
   P: addDefaultProps(_html.P, { style: designModel.pStyles }),
   Span: addDefaultProps(_html.Span, { style: designModel.spanStyles }),
   Strong: addDefaultProps(_html.Strong, { style: designModel.strongStyles }),
+  Ul: addDefaultProps(_html.Ul, { style: designModel.ulStyles }),
+  Video: addDefaultProps(_html.Video, { style: designModel.videoStyles }),
 };
 export const View = addDefaultProps(_View, { style: designModel.viewStyles });
 export const Parallax = addDefaultProps(_Parallax, { style: designModel.parallaxStyles });
