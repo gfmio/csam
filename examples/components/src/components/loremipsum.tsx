@@ -1,15 +1,10 @@
 
 import { component as c } from "../../../../lib/component";
-import { A, H1 } from "../../../../lib/components/html";
-import { Text } from "../../../../lib/components/text";
-import { View } from "../../../../lib/components/view";
 
-const oneLineHeightPaddingTop = { paddingTop: "1.618rem" };
+import { designModel, html, Text, View } from "./core";
 
-const viewStyle = {};
-const headingStyle = { padding: 0, margin: 0, fontWeight: 200, fontSize: "2.0em" };
-// padding: 0,
-const textStyle = { margin: 0, fontWeight: 300 };
+const A = html.A;
+const H1 = html.H1;
 
 const sample = (languageName: string, text: string, direction: string = "ltr") => ({
   direction,
@@ -49,9 +44,9 @@ const loremIpsums = [
 
 const OneLoremIpsum = (props: any, children: any[]) => {
   return (
-    <View style={ { ...viewStyle, ...oneLineHeightPaddingTop, fontSize: "3vmin", margin: "0 auto", maxWidth: "33em" } }>
-      <H1 dir={ props.direction } style={ headingStyle }>{ props.language }</H1>
-      <Text dir={ props.direction } style={{ ...textStyle, ...oneLineHeightPaddingTop }}>{ props.text }</Text>
+    <View style={{ marginTop: designModel.defaultMargin }}>
+      <H1 dir={ props.direction } style={{ marginBottom: designModel.defaultMargin }}>{ props.language }</H1>
+      <Text dir={ props.direction }>{ props.text }</Text>
     </View>
   );
 };
@@ -60,10 +55,10 @@ const allTheLoremIpsums = loremIpsums.map((o: any) => <OneLoremIpsum { ...o } />
 
 export function LoremIpsum(props: any, children: any[]) {
   return (
-    <View style={{ ...viewStyle }} { ...props }>
-      <View style={{ maxWidth: "33em", fontSize: "3vmin", margin: "0 auto" }}>
-        <H1 style={ headingStyle }>🌎 🌍 🌏 Lorem Ipsum 🌎 🌍 🌏</H1>
-        <Text style={{ ...textStyle, ...oneLineHeightPaddingTop }}>
+    <View {...{ ...props, ...{ style: {}} }}>
+      <View>
+        <H1 style={{ marginBottom: designModel.defaultMargin }}>🌎 🌍 🌏 Lorem Ipsum 🌎 🌍 🌏</H1>
+        <Text>
           What follows is a long list of Lorem Ipsums in various scripts for multi-lingual typography testing purposes.
           Text samples and order taken from <A href="http://generator.lorem-ipsum.info/" target="_blank">http://generator.lorem-ipsum.info/</A>)
         </Text>

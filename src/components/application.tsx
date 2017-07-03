@@ -4,10 +4,12 @@ import { Body, Head, Html, Link, Meta, Script, Title } from "./html";
 
 export function Application(props: any, children: any[]) {
   props = props || {};
+  props.htmlProps = props.htmlProps || {};
+  props.bodyProps = props.bodyProps || {};
   children = children || [];
 
   return (
-    <Html style={{ height: "100%", minHeight: "100%" }}>
+    <Html style={ props.htmlProps.style }>
       <Head>
         <Meta charset="utf-8" />
         { props.title !== undefined ? <Title>{ props.title }</Title> : [] }

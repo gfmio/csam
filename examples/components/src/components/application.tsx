@@ -29,7 +29,7 @@ const appStyles = {
   fontFamily: "'San Francisco', -apple-system, system-ui, '.SFNSText-Regular', BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', icon, sans-serif",
   lineHeight: baseLineHeight,
   minHeight: "100%",
-  wordWrap: "break-word"
+  wordWrap: "break-word",
 };
 
 // const pStyles = {
@@ -89,6 +89,7 @@ export function Application(props: any, children: any[]) {
       <Header style={{ ...headerStyles, flex: 1 }}>
         <H1 style={ h1Styles }>CSAM components</H1>
       </Header>
+      <View>{ children }</View>
       <View style={{ flex: 1 }}>
         <Parallax src="/media/flower.jpg" style={{ padding: `${7.0 * baseLineHeight}rem 0` }}>
           <H1 style={{ ...h1Styles, textAlign: "center", fontSize: '5rem', lineHeight: `${5 * 1.618}rem`, color: "#FFFFFF", textShadow: "#111111 0 0 0.5rem" }}>
