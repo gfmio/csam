@@ -6,23 +6,23 @@ export function Badge(props: any, children: any[]) {
   children = children || [];
 
   const defaultStyle = {
-    "box-sizing": "border-box",
-    "min-width": "22px",
-    "height": "22px",
-    "line-height": "22px",
-    "padding": "0 5px",
-    "border-radius": "500px",
-    "vertical-align": "middle",
-    "background": "#1e87f0",
-    "color": "#fff",
-    "font-size": "14px",
-    "display": "inline-flex",
-    "-ms-flex-pack": "center",
-    "-webkit-justify-content": "center",
-    "justify-content": "center",
     "-ms-flex-align": "center",
+    "-ms-flex-pack": "center",
     "-webkit-align-items": "center",
+    "-webkit-justify-content": "center",
     "align-items": "center",
+    "background": "#1e87f0",
+    "border-radius": "500px",
+    "box-sizing": "border-box",
+    "color": "#fff",
+    "display": "inline-flex",
+    "font-size": "14px",
+    "height": "22px",
+    "justify-content": "center",
+    "line-height": "22px",
+    "min-width": "22px",
+    "padding": "0 5px",
+    "vertical-align": "middle",
   };
 
   const style = {...defaultStyle, ...props.style};
