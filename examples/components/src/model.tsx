@@ -1,13 +1,14 @@
 
 import { Model } from "../../../lib/model";
 import { HelloWorldState } from "./state";
+import { HelloWorldActions } from "./actions";
 
 import { component as c } from "../../../lib/component";
 // import * as html from "../../../lib/components/html";
 import { designModel, html, Application, View, Text, Parallax } from "./components/core";
 import { LoremIpsum } from "./components/loremipsum";
 
-import { Accordion } from "../../../lib/components/accordion";
+// import { Accordion } from "../../../lib/components/accordion";
 import { Badge } from "../../../lib/components/badge";
 import { Breadcrumb } from "../../../lib/components/breadcrumb";
 
@@ -46,11 +47,57 @@ const Audio = html.Audio;
 // const Option = html.Option;
 // const Button = html.Button;
 
+const MyAccordion = (props: any, children: any[]) => {
+  console.log(props);
+  const theChildren = props.content.map((child: any, n: number) => {
+    return (
+      <Li>
+        <Text style={{ ...designModel.strongStyles }} on={{ click: (e: any) => { props.action(props, n) } }}>{ child.title }</Text>
+        <View style={{ display: (child.open ? "block" : "none") }}>{ child.content }</View>
+      </Li>
+    );
+  });
+  console.log(theChildren);
+  return (
+    <Ul>
+      { theChildren }
+    </Ul>
+  );
+};
+
 export class HelloWorldModel extends Model {
   public currentUrl: string;
 
+  public actions: HelloWorldActions;
+
+  public viewModel: any = {
+    accordion: {
+      content: [
+        {
+          title: "Item 1",
+          content: (<Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</Text>),
+          open: true,
+        },
+        {
+          title: "Item 2",
+          content: (<Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</Text>),
+          open: false,
+        },
+        {
+          title: "Item 3",
+          content: (<Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</Text>),
+          open: false,
+        },
+      ],
+    },
+  };
+
   constructor(state: HelloWorldState) {
     super(state);
+    this.actions = new HelloWorldActions();
+    this.actions.attachModel(this);
+
+    this.viewModel.accordion.action = (accordionModel: any, toggledId: number) => { return this.actions.toggleMyAccordion(accordionModel, toggledId); };
   }
 
   public present(data: any) {
@@ -59,7 +106,6 @@ export class HelloWorldModel extends Model {
   }
 
   public currentView() {
-    designModel.baseFontFamily = "Comic Sans MS";
     return {
       component: (
         <Application>
@@ -109,15 +155,9 @@ export class HelloWorldModel extends Model {
                 <a href="#">Link</a>
               </Breadcrumb>
 
-              <H2>Accordion</H2>
+              { /* <H2>Accordion</H2>
 
-              <Accordion content={
-                [
-                  {title: "Item 1", content: (<Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</Text>), open: true},
-                  {title: "Item 2", content: (<Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</Text>), open: false},
-                  {title: "Item 3", content: (<Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</Text>), open: false}
-                ]
-              } />
+              <Accordion { ...this.viewModel.accordion } /> */ }
 
               <H2>Figures</H2>
               <Figure>
@@ -244,6 +284,9 @@ export class HelloWorldModel extends Model {
               <H2>Icons</H2>
 
               <Text>...tbi...</Text>
+
+              <H2>New Accordion</H2>
+              <MyAccordion { ...this.viewModel.accordion }/>
 
             </View>
             <View style={{ marginLeft: "auto", marginRight: "auto", marginTop: designModel.defaultMargin, marginBottom: designModel.defaultMargin, maxWidth: "33em" }}>

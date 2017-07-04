@@ -11,6 +11,10 @@ export class HelloWorldState extends State {
     this.actions = actions;
   }
 
+  public nextAction(model: HelloWorldModel) {
+    console.log('in next action');
+  }
+
   public representation(model: HelloWorldModel) {
     this.display(model.currentView());
   }

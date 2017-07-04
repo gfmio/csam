@@ -7,6 +7,14 @@ export function Accordion(props: any, children: any[]) {
   props = props || {};
   children = children || [];
 
+  const onClickHandler = (child: any) => {
+    console.log("sdjspdofjsdop", child);
+    return (e: any) => {
+      console.log(e, child);
+      child.open = !(child.open);
+    };
+  };
+
   const defaultStyle = {
     "list-style": "none",
     "padding": 0,
@@ -51,7 +59,7 @@ export function Accordion(props: any, children: any[]) {
     }
     return (
       <Li style={ marginStyle }>
-        <H3 style={ titleStyle } onclick={ onClick }>
+        <H3 style={ titleStyle }>
           { title }
           <Span style={ isOpen ? iconOpenStyle : iconCloseStyle }></Span>
         </H3>
@@ -60,9 +68,9 @@ export function Accordion(props: any, children: any[]) {
         </View>
       </Li>
     );
-  }
+  };
 
-  const items = props.content.map((el: any) => accordionElement(el.title, el.content, el.open, props.onClick));
+  const items = props.content.map((el: any) => accordionElement(el.title, el.content, el.open, onClickHandler(el)));
 
   return (
     <Ul style={ style }>
